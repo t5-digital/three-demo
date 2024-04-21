@@ -22,7 +22,7 @@ const loader = new GLTFLoader();
 
 window.scene = scene;
 
-loader.load( './example.glb', function ( gltf ) {
+loader.load( './static/example.glb', function ( gltf ) {
 
   scene.add( gltf.scene );
   window.gltf = gltf;
