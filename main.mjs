@@ -33,6 +33,20 @@ loader.load( './static/example.glb', function ( gltf ) {
 
 } );
 
+loader.load( './static/alpaca2.glb', function ( gltf ) {
+
+  gltf.scene.scale.set(0.3, 0.3, 0.3);
+  gltf.scene.position.set(3, 0, -10);
+  scene.add( gltf.scene );
+  window.gltf = gltf;
+
+}, undefined, function ( error ) {
+
+	console.error( error );
+
+} );
+
+
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
